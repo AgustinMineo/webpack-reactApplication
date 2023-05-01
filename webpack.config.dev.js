@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+const {CleanWebpackPlguin} = require('clean-webpack-plugin');
 
 module.exports ={
     entry:'./src/index.js', //Configuramos el entry del project, normalmente esta ne src/index.js
@@ -9,8 +12,9 @@ module.exports ={
         filename: 'bundle.js',
     },
     resolve:{
-        extensions : ['.js','.jsx']//Declaramos las extensiones que vamos a utilizar
+        extensions : ['.js','.jsx'],//Declaramos las extensiones que vamos a utilizar
     },
+    mode : 'development',
     module:{
         rules : [ //Reglas y extenciones que vamos a utilizar
             {
@@ -44,5 +48,10 @@ module.exports ={
        new MiniCssExtractPlugin({
         filename: '[name].css'
        }) 
-    ]
+    ],
+    devServer : { //Configuración del servidor de desarollo.
+        static:{directory: path.join(__dirname, 'dist'),},
+        compress: true,
+        port : 3006
+    }
 }
