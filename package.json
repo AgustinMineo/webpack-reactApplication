@@ -1,0 +1,35 @@
+{
+  "name": "webpack-reactapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgustinMineo/webpack-reactApplication.git"
+  },
+  "keywords": [
+    "react",
+    "react-dom",
+    "webpack",
+    "js"
+  ],
+  "author": "Agustin Mineo <mineoagustin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AgustinMineo/webpack-reactApplication/issues"
+  },
+  "homepage": "https://github.com/AgustinMineo/webpack-reactApplication#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.5",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2"
+  }
+}
